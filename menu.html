@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Menu.html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            position: fixed;
+            z-index: 3;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+            /* position: fixed; */
+            width: 100%;
+            /* z-index: 2; */
+            
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 60px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.15);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5em;
+            color: #2c3e50;
+        }
+
+        .menu-item p {
+            color: #7f8c8d;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .menu-item .price {
+            font-size: 1.2em;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #ecf0f1;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .testimonial-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: 280px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-item p {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        .testimonial-item h4 {
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .logo img {
+            position: absolute;
+            height: 5vw;
+            width: 5vw;
+            clip-path: circle(40% at 50% 50%);
+            top: 0;
+            
+            
+        }
+        .fullsection{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .menu-item{
+           gap: 50px;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            .menu-item {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .menu-container {
+                flex-direction: column;
+            }
+
+            .testimonial-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav a {
+                font-size: 1em;
+                margin: 0 8px;
+            }
+
+            .menu-item {
+                width: 100%;
+                margin: 10px 0;
+                padding: 15px;
+            }
+
+            .menu-item h3 {
+                font-size: 1.3em;
+            }
+
+            .menu-item p {
+                font-size: 0.9em;
+            }
+
+            .menu-item .price {
+                font-size: 1.1em;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="l2.jpg" alt="">
+        </div>
+        <h1>Coffee Shop Menu</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+       
+        <a href="#menu">Menu</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="fullsection">
+
+    <!-- Menu Section -->
+    <div id="menu" class="menu-container">
+        <div class="menu-item">
+            <img src="55.jpg" alt="Espresso">
+            <h3>Espresso</h3>
+            <p>A strong and bold coffee shot.</p>
+            <p class="price">$2.50</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="33.jpg" alt="Latte">
+            <h3>Latte</h3>
+            <p>A creamy coffee with steamed milk.</p>
+            <p class="price">$3.75</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="22.jpg" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>A coffee with equal parts espresso, steamed milk, and froth.</p>
+            <p class="price">$3.50</p>
+        </div>
+    </div>
+    <div id="menu" class="menu-container">
+        <div class="menu-item">
+            <img src="11.jpg" alt="Americano">
+            <h3>Americano</h3>
+            <p>Espresso diluted with hot water for a lighter flavor.</p>
+            <p class="price">$2.80</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="66.jpg" alt="Mocha">
+            <h3>Mocha</h3>
+            <p>Espresso with chocolate syrup and steamed milk.</p>
+            <p class="price">$4.00</p>
+        </div>
+
+        <div class="menu-item">
+            <img src="44.jpg" alt="Iced Coffee">
+            <h3>Iced Coffee</h3>
+            <p>Chilled brewed coffee served over ice.</p>
+            <p class="price">$3.00</p>
+        </div>
+    </div>
+</div>
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-item">
+            <p>"Best coffee in town! The cappuccino is my favorite."</p>
+            <h4>- Mahtab</h4>
+        </div>
+        <div class="testimonial-item">
+            <p>"A relaxing environment with great service. Highly recommend!"</p>
+            <h4>- Asif</h4>
+        </div>
+        <div class="testimonial-item">
+            <p>"The mocha is absolutely amazing, I can't stop coming back."</p>
+            <h4>- Ali</h4>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Coffee Shop. www.kashif.com.</p>
+    </footer>
+
+</body>
+
+</html>
