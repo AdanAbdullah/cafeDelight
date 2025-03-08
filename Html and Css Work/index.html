@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* button {
+    position: absolute;
+    bottom: 0;
+    left:45%;
+
+} */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position:fixed;
+    width: 100%;
+    z-index: 3;
+    margin-bottom: 200px;
+}
+/* Navigation Bar Styling */
+
+
+nav a:hover {
+    color: #e74c3c;
+}
+
+.header .logo h1 {
+    margin-left: 20px;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-right: 30px;
+}
+
+.navigation ul li {
+    margin: 0 15px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 20px 30px;
+}
+.navigation ul li a:hover{
+    color: #c0653a;
+    text-decoration: overline;
+}
+
+.hero {
+    background: url('coffee-shop-hero.jpg') no-repeat center center/cover;
+    padding: 100px 15px;
+    text-align: center;
+    color: rgb(216, 101, 101);
+    /* margin-bottom: 40px; */
+}
+z
+.hero h2 {
+    font-size: 10em;
+    margin-bottom: 50px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #d47e46;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #71be91;
+}
+
+.featured-coffees {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured-coffees h2 {
+    font-size: 2.5em;
+    margin-top: 40px;
+}
+
+.coffees {
+    display: flex;
+    justify-content: space-around;
+}
+
+.coffee-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 2px 4px 6px rgba(177, 56, 56, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.coffee-item img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.coffee-item h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.coffee-item p {
+    margin-top: 10px;
+    color: #777;
+}
+
+.coffee-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Cool Picks Section */
+.cool-picks {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cool-picks h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.cool-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cool-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cool-item img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cool-item h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.cool-item p {
+    margin-top: 10px;
+    color: #777;
+}
+
+.cool-item:hover {
+    transform: translateY(-10px);
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* ul li{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+} */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.footer-info,
+.footer-links,
+.footer-social {
+    width: 30%;
+}
+
+.footer-info h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 1em;
+    color: #ecf0f1;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.footer-links ul li a:hover {
+    color: #e74c3c;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #ecf0f1;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+.footer-social a:hover {
+    color: #e74c3c;
+}
+
+
+
+.footer-bottom p {
+    margin: 0;
+}
+
+ .logo img {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+   clip-path: circle(45% at 50% 50%);
+    margin-left: 17vw;
+    margin-top: -10px ;
+ }
+ .logo h1{
+    font-size: 10vw;
+ }
+ button {
+    color: #463f3c;
+    cursor: pointer;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    
+ }
+ button:hover{
+    background-color:#c09379;
+    /* color: #d47e46; */
+ }
+ .coffee-item button{
+    
+ }
+ @media (max-width: 1200px) {
+    .coffee-item,
+    .cool-item {
+        width: 45%;
+    }
+
+    .navigation ul {
+        padding-left: 20px;
+    }
+
+    .navigation ul li {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .coffee-item,
+    .cool-item {
+        width: 100%;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-social {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+
+    .logo h1 {
+        font-size: 15vw;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+</style>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo">
+                <img src="l1.jpg" alt="Coffee Shop Logo">
+            </div>
+            <h1>Coffee Delight</h1>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="menu.html"target="blank"  >Menu</a></li>
+                <li><a href="About Us.html"target="blank" >About Us</a></li>
+                <li><a href="Contact Us.html"target="blank" >Contact</a></li>
+
+            </ul>
+           
+        </nav>
+        <!-- Navigation Bar -->
+
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Coffee Delight</h2>
+            <p>Your favorite place for the finest coffee.</p>
+            <a href="#" class="cta-button">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Featured Coffee Section -->
+    <section class="featured-coffees">
+        <h2>Our Featured Coffees</h2>
+        <div class="coffees">
+            <div class="coffee-item">
+                <img src="cofee1.jpg" alt="Espresso">
+                <h3>Cofee</h3>
+                <p>A rich, bold shot of espresso.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+            <div class="coffee-item">
+                <img src="latte.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Smooth and creamy with a touch of espresso.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+            <div class="coffee-item">
+                <img src="capchino.jpg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Perfectly balanced espresso and steamed milk.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cool Picks Section -->
+    <section class="cool-picks">
+        <h2>Cool Picks of the Day</h2>
+        <div class="cool-items">
+            <div class="cool-item">
+                <img src="ice.jpg" alt="Iced Coffee">
+                <h3>Iced Coffee</h3>
+                <p>Chilled and refreshing, perfect for hot days.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+            <div class="cool-item">
+                <img src="frrapp.jpg" alt="Frappuccino">
+                <h3>Frappuccino</h3>
+                <p>Blended with ice, creamy, and decadent.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+            <div class="cool-item">
+                <img src="moca.jpg" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>Chocolatey goodness meets rich espresso.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+        </div>
+    </section>
+    <section class="cool-picks">
+        <h2>Cofee with Cakes</h2>
+        <div class="cool-items">
+            <div class="cool-item">
+                <img src="iced.jpg" alt="Iced Coffee">
+                <h3>Iced Coffee</h3>
+                <p>Chilled and refreshing, perfect for hot days.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+            <div class="cool-item">
+                <img src="cool.jpg" alt="Frappuccino">
+                <h3>Cool Cake</h3>
+                <p>Blended with ice, creamy, and decadent.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+            <div class="cool-item">
+                <img src="cake.jpg" alt="Mocha">
+                <h3>Choklet</h3>
+                <p>Chocolatey goodness meets rich espresso.</p>
+                <a href="Order Now.html"target="_blank"><button>Order Now </button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">Twitter</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Coffee Shop. www.kashif.com</p>
+    </div>
+</footer>
+
+</body>
+</html>
